@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#grid {
+    border-style: solid;
+    border-color: black;
+
+    margin: 100px;
+    width: 50vw;
+    height: 50vw;
+}
+
