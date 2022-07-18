@@ -1,10 +1,6 @@
-const sizeButton = document.querySelector('#sizeButton');
-const grid = document.querySelector('#grid')
-
-sizeButton.addEventListener('click', () => {
-
-    grid.replaceChildren();
-
+// Function To Create Grid Using Number Inputted Into Size Input
+function createGrid() {
+    const grid = document.querySelector('#grid');
     const gridSize = document.querySelector('#sizeInput').value
     for (let i = 1; i <= gridSize; i++) {
         let outerBox = 'oBox' + i
@@ -23,10 +19,15 @@ sizeButton.addEventListener('click', () => {
             verticalBox.classList.add('verticalBox')
             verticalBox.classList.add(innerBox)
             inner.appendChild(verticalBox);
-
-
         }
 }
+}
+
+// Size Button That Resets Grid(If Used) And Runs The CreateGrid() Function
+const sizeButton = document.querySelector('#sizeButton');
+sizeButton.addEventListener('click', () => {
+    grid.replaceChildren();
+    createGrid()    
 })
 
 
@@ -39,9 +40,6 @@ sizeButton.addEventListener('click', () => {
 
 
 
-// const qwe = document.querySelector('.box7')
-// const ex1 = document.createElement('p');
-// ex1.classList.add('ex1');
-// ex1.textContent = 'Hey I’m red!'
-// ex1.style.color = 'red';
-// qwe.appendChild(ex1);;
+
+
+
