@@ -1,20 +1,12 @@
+const sizeButton = document.querySelector('#sizeButton');
+sizeButton.addEventListener('click', () => {
+    const numb = document.querySelector('#sizeInput').value
+    console.log(numb)
+})
+
+
+
 const grid = document.querySelector('#grid')
-
-// for (let i = 0; i < 8; i++) {
-//     const horizontalBox = document.createElement('div');
-//     horizontalBox.classList.add('horizontalBox');
-//     grid.appendChild(horizontalBox);   
-// }
-
-// const inner = document.querySelector('.horizontalBox')
-
-// for (let i = 0; i < 8; i++) {
-//     const verticalBox = document.createElement('div');
-//     verticalBox.classList.add('verticalBox')
-//     inner.appendChild(verticalBox); 
-// }
-
-
 
 for (let i = 1; i < 9; i++) {
     let outerBox = 'oBox' + i
@@ -37,6 +29,10 @@ for (let i = 1; i < 9; i++) {
 
     }
 }
+
+
+
+
 
 
 
