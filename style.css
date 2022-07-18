@@ -19,7 +19,7 @@ body {
     height: 50vw;
 }
 
-.box {
+.horizontalBox {
     border-style: solid;
     border-color: black;
     height: auto;
@@ -31,7 +31,7 @@ body {
     
 }
 
-.dox {
+.verticalBox {
     border-style: solid;
     border-color: black;
     width: auto;
