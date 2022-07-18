@@ -9,6 +9,11 @@ body {
     border-style: solid;
     border-color: black;
 
+    display: flex;
+    justify-content: center;
+    
+
+
     margin: 100px;
     width: 50vw;
     height: 50vw;
@@ -23,5 +28,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex: 1;
+    
 }
 
