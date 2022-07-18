@@ -24,13 +24,13 @@ function createGrid() {
     // For Loop That Creates Vertical Component Of Grid Within A Horizontal Component
     for (let j = 1; j <= gridSize; j++) {
         let innerBox = 'iBox' + j
-    let ref = 'gridX' + i + 'Y' + j    
+        let ref = 'gridX' + i + 'Y' + j    
         const verticalBox = document.createElement('div');
         verticalBox.classList.add('verticalBox')
         verticalBox.classList.add(innerBox)
         verticalBox.classList.add(ref)
         inner.appendChild(verticalBox);
-
+    // Event Handler Code
         tempo = '.' + ref
         tempo1 = document.querySelector(tempo)
         tempo1.addEventListener('mouseover', () => {
