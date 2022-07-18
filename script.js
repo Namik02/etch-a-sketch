@@ -3,10 +3,9 @@ const grid = document.querySelector('#grid')
 
 sizeButton.addEventListener('click', () => {
 
+    grid.replaceChildren();
 
-
-    
-
+    const gridSize = document.querySelector('#sizeInput').value
     for (let i = 1; i <= gridSize; i++) {
         let outerBox = 'oBox' + i
 
