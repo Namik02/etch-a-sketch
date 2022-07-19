@@ -40,3 +40,22 @@ function createGrid() {
     }
 }
 
+
+let chosenColor = "#0000ff";
+
+const hover = document.querySelector('hover')
+
+
+
+
+
+const selectButton = document.querySelector('#selectButton')
+selectButton.addEventListener('click', () => {
+    chosenColor = document.querySelector('#colorSelector')
+    
+
+    alert(chosenColor.value);
+  });
+
+
+
