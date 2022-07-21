@@ -33,28 +33,23 @@ function createGrid() {
     // Event Handler Code
         tempo = '.' + ref
         tempo1 = document.querySelector(tempo)
-        tempo1.addEventListener('mouseover', () => {
-            verticalBox.classList.add('hover')
-        });
+        // tempo1.addEventListener('mouseover', () => {
+        //     verticalBox.classList.add('.colorSelector')
+        //     verticalBox.style.color = chosenColor
+            
+        // });
+        tempo1.addEventListener('click', function (e) {
+            e.target.style.background = chosenColor;
+          });
     }
     }
 }
 
 
-let chosenColor = "#0000ff";
+let chosenColor = "#ff0000";
 
-const hover = document.querySelector('hover')
-
-
-
-
-
-const selectButton = document.querySelector('#selectButton')
-selectButton.addEventListener('click', () => {
-    chosenColor = document.querySelector('#colorSelector')
-    
-
-    alert(chosenColor.value);
+document.querySelector('#selectButton').addEventListener('click', () => {
+    chosenColor = document.querySelector('.colorSelector').value
   });
 
 
