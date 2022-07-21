@@ -1,11 +1,9 @@
 // Size Button That Resets Grid(If Used) And Runs The CreateGrid() Function
-const sizeButton = document.querySelector('#sizeButton');
-sizeButton.addEventListener('click', () => {
+document.querySelector('#sizeButton')
+.addEventListener('click', () => {
     grid.replaceChildren();
     createGrid()    
 })
-
-
 
 // Function To Create Grid Using Number Inputted Into Size Input
 function createGrid() {
@@ -15,42 +13,26 @@ function createGrid() {
     for (let i = 1; i <= gridSize; i++) {
         let outerBox = 'oBox' + i
         const horizontalBox = document.createElement('div');
-        horizontalBox.classList.add('horizontalBox');
-        horizontalBox.classList.add(outerBox);
+        horizontalBox.classList.add('horizontalBox', outerBox);
         grid.appendChild(horizontalBox);
 
-        let test = '.' + outerBox
-        let inner = document.querySelector(test)
+        temp = '.' + outerBox
+        let inner = document.querySelector(temp)
     // For Loop That Creates Vertical Component Of Grid Within A Horizontal Component
-    for (let j = 1; j <= gridSize; j++) {
-        let innerBox = 'iBox' + j
-        let ref = 'gridX' + i + 'Y' + j    
-        const verticalBox = document.createElement('div');
-        verticalBox.classList.add('verticalBox')
-        verticalBox.classList.add(innerBox)
-        verticalBox.classList.add(ref)
-        inner.appendChild(verticalBox);
-    // Event Handler Code
-        tempo = '.' + ref
-        tempo1 = document.querySelector(tempo)
-        // tempo1.addEventListener('mouseover', () => {
-        //     verticalBox.classList.add('.colorSelector')
-        //     verticalBox.style.color = chosenColor
-            
-        // });
-        tempo1.addEventListener('click', function (e) {
-            e.target.style.background = chosenColor;
+     for (let j = 1; j <= gridSize; j++) {
+         let innerBox = 'iBox' + j
+         const verticalBox = document.createElement('div');
+         verticalBox.classList.add('verticalBox', innerBox);
+         inner.appendChild(verticalBox);
+    // Event Handler Code For Mouseover and Color Selector
+         let ref = 'gridX' + i + 'Y' + j    
+        verticalBox.classList.add(ref);
+        temp = '.' + ref
+
+        document.querySelector(temp)
+        .addEventListener('mouseover', function (e) {
+        e.target.style.background = document.querySelector('#colorSelector').value;
           });
     }
     }
 }
-
-
-let chosenColor = "#ff0000";
-
-document.querySelector('#selectButton').addEventListener('click', () => {
-    chosenColor = document.querySelector('.colorSelector').value
-  });
-
-
-
